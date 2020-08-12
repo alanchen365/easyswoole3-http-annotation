@@ -1,6 +1,6 @@
 <?php
 
-namespace Es3Doc\Generator;
+namespace Es3Doc;
 
 use App\Constant\AppConst;
 use EasySwoole\Component\Singleton;
