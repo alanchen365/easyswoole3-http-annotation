@@ -17,7 +17,7 @@ class Es3Doc
     public function generator()
     {
         /** 不是生产环境 就生成文档 */
-        if (!EsConfig::getInstance()->isProduction()) {
+        if (!isProduction()) {
 
             /** 替换接口文档扫描目录 */
             $docPageTpl = EASYSWOOLE_ROOT . '/vendor/easyswoole/http-annotation/src/Annotation/docPage.tpl';
