@@ -28,6 +28,11 @@ class Es3Doc
             file_put_contents($easyDocBin, str_replace('HttpController', AppConst::ES_DIRECTORY_CONTROLLER_NAME, file_get_contents($easyDocBin)));
             file_put_contents($easyDocBin, str_replace('easyDoc.html', './Doc/document.html', file_get_contents($easyDocBin)));
 
+            /** 替换 Parser.php */
+            $parser = EASYSWOOLE_ROOT . '/vendor/easyswoole/http-annotation/src/Annotation/Parser.php';
+            unlink($parser);
+            copy('./vendor/alanchen365/easyswoole3-http-annotation/src/Parser.php', $parser);
+
             /** 删除老文档 */
             $docPath = EASYSWOOLE_ROOT . '/Doc/document.html';
             file_put_contents($docPath, 'document failure !');
